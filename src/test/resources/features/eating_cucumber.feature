@@ -6,3 +6,8 @@ Feature: Eating too many cucumbers may not be good for you
     Given John is hungry
     When He eats 3 cucumbers
     Then he will be full
+
+  Scenario: Eating too many is a problem
+    Given Ivan is hungry
+    When He eats 10 cucumbers
+    Then He faints
