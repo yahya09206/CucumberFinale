@@ -2,6 +2,7 @@ package com.yahya.step_definitions;
 
 import com.yahya.pages.WLogin;
 import com.yahya.utility.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -30,5 +31,22 @@ public class WebOrderLoginStepDef {
     public void we_should_see_the_all_orders_page() {
 
         assertEquals("Web Orders", Driver.getDriver().getTitle());
+    }
+
+    @When("we provide invalid credentials")
+    public void weProvideInvalidCredentials() {
+
+        login.login("Testers", "test");
+    }
+
+
+    @Then("we should still be at the login page")
+    public void weShouldStillBeAtTheLoginPage() {
+
+    }
+
+    @And("login error message should be present")
+    public void loginErrorMessageShouldBePresent() {
+
     }
 }
