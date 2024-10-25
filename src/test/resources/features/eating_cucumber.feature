@@ -1,4 +1,4 @@
-feature: Eating too many cucumbers may not be good for you
+Feature: Eating too many cucumbers may not be good for you
 
   Eating too much of anything may not be good for you
 
