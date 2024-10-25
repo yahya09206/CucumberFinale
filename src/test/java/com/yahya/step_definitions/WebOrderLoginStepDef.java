@@ -43,10 +43,12 @@ public class WebOrderLoginStepDef {
     @Then("we should still be at the login page")
     public void weShouldStillBeAtTheLoginPage() {
 
+        assertEquals("Web Orders Login", Driver.getDriver().getTitle());
     }
 
     @And("login error message should be present")
     public void loginErrorMessageShouldBePresent() {
 
+        assertTrue(login.loginErrorMsg());
     }
 }
