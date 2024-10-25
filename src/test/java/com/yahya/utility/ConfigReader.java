@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigReader {
-    //Declare Properties object at class level so it can be accessible in static method
+    //Declare Properties object at class level, so it can be accessible in static method
     private static Properties properties =  new Properties();
 
     static {
