@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
  */
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features",
-                glue = "com/yahya/step_definitions")
+                glue = "com/yahya/step_definitions",
+                //set dry run to true if you just want to see if there are missing step definitions
+                dryRun = false)
+//                tags = "@ui")
 public class TestRunner {
 }

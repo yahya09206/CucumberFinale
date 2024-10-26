@@ -15,13 +15,13 @@ public class Hooks {
      * Don't need to use the extends keyword because io.cucumber.java already knows
      */
 
-    @Before
+    @Before("@ui")
     public void setupDriver(){
 
         Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     }
 
-    @After
+    @After("@ui")
     public void tearDown(){
         Driver.closeBrowser();
     }
