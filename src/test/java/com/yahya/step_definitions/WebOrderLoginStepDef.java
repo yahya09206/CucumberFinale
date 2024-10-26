@@ -7,11 +7,14 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.jupiter.api.Assertions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class WebOrderLoginStepDef {
 
+    private static final Logger log = LoggerFactory.getLogger(WebOrderLoginStepDef.class);
     WLogin login;
 
     @Given("we are at the web order login page")
@@ -54,5 +57,8 @@ public class WebOrderLoginStepDef {
 
     @When("user provides username {string} and password {string}")
     public void userProvidesUsernameAndPassword(String username, String password) {
+
+        // username and password = whatever was given to scenario
+        login.login(username, password);
     }
 }
