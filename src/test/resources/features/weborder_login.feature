@@ -16,6 +16,12 @@ Feature: Web order app login
     Then we should still be at the login page
     And login error message should be present
 
+    #Whatever is enclosed inside of parenthesis will be sent as a parameter value
   Scenario: User logs in with specific credentials
     When user provides username "Tester" and password "test"
     Then we should see the all orders page
+
+  Scenario: User logs in with the wrong credentials
+    When user provides username "bla" and password "bla"
+    Then we should still be at the login page
+    And login error message should be present
