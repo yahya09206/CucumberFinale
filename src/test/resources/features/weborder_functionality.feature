@@ -7,7 +7,6 @@ Feature: WebOrder app is working as expected
     And we provide valid credentials
     When we select "Order" tab from sidebar
     Then we should see below options in Product dropdown list
-      | Product     |
       | MyMoney     |
       | FamilyAlbum |
       | ScreenSaver |
