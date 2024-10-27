@@ -14,6 +14,6 @@ import org.junit.runner.RunWith;
                 plugin = {"pretty", "html:target/cucumber_report.html"},
                 //set dry run to true if you just want to see if there are missing step definitions
                 dryRun = false,
-                tags = "@ui")
+                tags = "@wip3")
 public class TestRunner {
 }
