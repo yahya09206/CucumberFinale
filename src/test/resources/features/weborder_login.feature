@@ -27,6 +27,7 @@ Feature: Web order app login
     Then we should still be at the login page
     And login error message should be present
 
+    @ui
   Scenario: Login to weborder app by providing username and password in 2 column table
     When we provide below credentials
       | username | Tester |
