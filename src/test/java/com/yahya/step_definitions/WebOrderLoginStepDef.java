@@ -10,6 +10,8 @@ import org.junit.jupiter.api.Assertions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Map;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class WebOrderLoginStepDef {
@@ -60,5 +62,13 @@ public class WebOrderLoginStepDef {
 
         // username and password = whatever was given to scenario
         login.login(username, password);
+    }
+
+    @When("we provide below credentials")
+    public void weProvideBelowCredentials(Map<String, String> credentialMap) {
+//        String usernameFromTable = credentialMap.get("username");
+//        String passwordFromTable = credentialMap.get("password");
+        System.out.println(credentialMap);
+        login.login(credentialMap.get("username"), credentialMap.get("password"));
     }
 }

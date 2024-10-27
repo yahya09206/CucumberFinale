@@ -26,3 +26,9 @@ Feature: Web order app login
     When user provides username "bla" and password "bla"
     Then we should still be at the login page
     And login error message should be present
+
+  Scenario: Login to weborder app by providing username and password in 2 column table
+    When we provide below credentials
+      | username | Tester |
+      | password | test   |
+    Then we should see the all orders page
