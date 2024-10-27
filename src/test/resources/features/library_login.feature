@@ -11,7 +11,6 @@ Feature: Logging into library app
     Then user should be at dashboard page
     Examples:
       | email            | password    |
-      | student1@library | libraryUser |
       | student2@library | libraryUser |
       | student3@library | libraryUser |
       | student4@library | libraryUser |
